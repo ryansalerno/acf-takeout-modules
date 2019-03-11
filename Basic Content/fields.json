@@ -1,0 +1,219 @@
+{
+	"key": "layout_5b9fdbfa2d44f",
+	"name": "basic_content",
+	"label": "Basic Content",
+	"display": "block",
+	"sub_fields": [{
+			"key": "field_5b9fdbfa2d450",
+			"label": "Background",
+			"name": "background",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"white": "white",
+				"bg": "off-white",
+				"alt": "gray",
+				"primary": "dark blue",
+				"secondary": "light blue",
+				"highlight": "orange"
+			},
+			"allow_null": 0,
+			"default_value": "white",
+			"layout": "",
+			"return_format": ""
+		},
+		{
+			"key": "field_5b9fdbfa2d451",
+			"label": "Title",
+			"name": "title",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_5b9fdbfa2d452",
+			"label": "Subtitle",
+			"name": "subtitle",
+			"type": "text",
+			"instructions": "(Optional alternate-colored text immediately under the Title)",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_5b9fdbfa2d453",
+			"label": "Columns",
+			"name": "columns",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"collapsed": "",
+			"min": 0,
+			"max": 0,
+			"layout": "block",
+			"button_label": "Add Column",
+			"sub_fields": [{
+					"key": "field_5b9fdbfa2d454",
+					"label": "Icon",
+					"name": "icon",
+					"type": "image",
+					"instructions": "(This is an optional SVG icon.)",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "id",
+					"preview_size": "thumbnail",
+					"library": "all",
+					"min_width": "",
+					"min_height": "",
+					"min_size": "",
+					"max_width": "",
+					"max_height": "",
+					"max_size": "",
+					"mime_types": "svg"
+				},
+				{
+					"key": "field_5b9fdbfa2d455",
+					"label": "Title",
+					"name": "title",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": ""
+				},
+				{
+					"key": "field_5b9fdbfa2d456",
+					"label": "Content",
+					"name": "content",
+					"type": "wysiwyg",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"tabs": "all",
+					"toolbar": "full",
+					"media_upload": 1,
+					"delay": 1
+				}
+			]
+		},
+		{
+			"key": "field_5b9fdbfa2d457",
+			"label": "CTAs",
+			"name": "",
+			"type": "accordion",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"open": 0,
+			"multi_expand": 1,
+			"endpoint": 0
+		},
+		{
+			"key": "field_5b9fdbfa2d458",
+			"label": "How the buttons work:",
+			"name": "",
+			"type": "message",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "The Primary CTA will have an orange background. The Secondary CTA will be white.\r\n\r\nYou can add either, both, or none. If you add both, the Primary will always come first and be on the left.",
+			"new_lines": "wpautop",
+			"esc_html": 0
+		},
+		{
+			"key": "field_5b9fdbfa2d459",
+			"label": "Primary CTA",
+			"name": "cta_primary",
+			"type": "link",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array"
+		},
+		{
+			"key": "field_5b9fdbfa2d45a",
+			"label": "Secondary CTA",
+			"name": "cta_secondary",
+			"type": "link",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array"
+		}
+	],
+	"min": "",
+	"max": ""
+}

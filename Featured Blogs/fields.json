@@ -1,0 +1,138 @@
+{
+	"key": "5b69e17ada213",
+	"name": "featured_blogs",
+	"label": "Featured Blogs",
+	"display": "block",
+	"sub_fields": [{
+			"key": "field_5b71be2daff39",
+			"label": "Title",
+			"name": "title",
+			"type": "text",
+			"instructions": "Will default to \"What's New?\" if left empty.",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "What's New?",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_5b96dcb8cdfb2",
+			"label": "Subtitle",
+			"name": "subtitle",
+			"type": "text",
+			"instructions": "(Optional alternate-colored text immediately under the Title)",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_5b71be85aff3b",
+			"label": "Sticky Posts",
+			"name": "sticky_posts",
+			"type": "relationship",
+			"instructions": "Any posts you add here will be \"Stuck\" and display until they're removed or replaced from this module. The rest of the posts that can fit (or all of them if you leave this empty) will display according to the rules you choose in the next setting....",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"post_type": [
+				"post"
+			],
+			"taxonomy": "",
+			"filters": [
+				"search",
+				"taxonomy"
+			],
+			"elements": "",
+			"min": "",
+			"max": 3,
+			"return_format": "id"
+		},
+		{
+			"key": "field_5b71bec7aff3c",
+			"label": "The Rest",
+			"name": "rest",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"newest": "Newest Posts",
+				"category": "Chosen Category"
+			},
+			"allow_null": 0,
+			"default_value": "newest",
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_5b71bf33aff3d",
+			"label": "Category",
+			"name": "category",
+			"type": "taxonomy",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5b71bec7aff3c",
+					"operator": "==",
+					"value": "category"
+				}]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"taxonomy": "category",
+			"field_type": "select",
+			"allow_null": 0,
+			"add_term": 0,
+			"save_terms": 0,
+			"load_terms": 0,
+			"return_format": "id",
+			"multiple": 0
+		},
+		{
+			"key": "field_5c07edcd1ab33",
+			"label": "CTA",
+			"name": "cta",
+			"type": "link",
+			"instructions": "If you leave this blank, it'll default to a button that links to the main Blog page.",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array"
+		}
+	],
+	"min": "",
+	"max": ""
+}

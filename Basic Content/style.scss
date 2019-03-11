@@ -1,0 +1,16 @@
+.basic-content {
+	.many {
+		.column {
+			margin: 1.5em;
+			flex: 0 0 20em;
+		}
+	}
+
+	figure {
+		margin-top: 1.5em;
+
+		+ h4 {
+			margin-top: 1.5rem;
+		}
+	}
+}

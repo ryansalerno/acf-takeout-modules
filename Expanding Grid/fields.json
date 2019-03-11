@@ -1,0 +1,205 @@
+{
+	"key": "layout_5bad3505cb0db",
+	"name": "expanding_grid",
+	"label": "Expanding Grid",
+	"display": "block",
+	"sub_fields": [{
+			"key": "field_5bad38decb0e7",
+			"label": "Background",
+			"name": "background",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"white": "white",
+				"bg": "off-white",
+				"primary": "dark blue",
+				"img": "image"
+			},
+			"allow_null": 0,
+			"default_value": "",
+			"layout": "horizontal",
+			"return_format": "value"
+		},
+		{
+			"key": "field_5bad3505cb0dc",
+			"label": "Background Image",
+			"name": "background_image",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5bad38decb0e7",
+					"operator": "==",
+					"value": "img"
+				}]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "id",
+			"preview_size": "thumbnail",
+			"library": "all",
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": ""
+		},
+		{
+			"key": "field_5bad80697a423",
+			"label": "Title",
+			"name": "title",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": ""
+		},
+		{
+			"key": "field_5bad380fcb0e3",
+			"label": "Grid",
+			"name": "grid",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"collapsed": "",
+			"min": 0,
+			"max": 0,
+			"layout": "block",
+			"button_label": "Add Grid Item",
+			"sub_fields": [{
+					"key": "field_5bad3828cb0e4",
+					"label": "Image",
+					"name": "image",
+					"type": "image",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"return_format": "id",
+					"preview_size": "thumbnail",
+					"library": "all",
+					"min_width": "",
+					"min_height": "",
+					"min_size": "",
+					"max_width": "",
+					"max_height": "",
+					"max_size": "",
+					"mime_types": ""
+				},
+				{
+					"key": "field_5bad3838cb0e5",
+					"label": "Title",
+					"name": "title",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": ""
+				},
+				{
+					"key": "field_5be89bb4b723e",
+					"label": "Subtitle",
+					"name": "subtitle",
+					"type": "text",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"placeholder": "",
+					"prepend": "",
+					"append": "",
+					"maxlength": ""
+				},
+				{
+					"key": "field_5bad3870cb0e6",
+					"label": "Expanded Content",
+					"name": "expanded_content",
+					"type": "wysiwyg",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": "",
+						"class": "",
+						"id": ""
+					},
+					"default_value": "",
+					"tabs": "all",
+					"toolbar": "full",
+					"media_upload": 1,
+					"delay": 1
+				}
+			]
+		},
+		{
+			"key": "field_5bad5d5c96f4a",
+			"label": "Columns",
+			"name": "columns",
+			"type": "button_group",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"3": "3",
+				"4": "4"
+			},
+			"allow_null": 0,
+			"default_value": 3,
+			"layout": "horizontal",
+			"return_format": "value"
+		}
+	],
+	"min": "",
+	"max": ""
+}

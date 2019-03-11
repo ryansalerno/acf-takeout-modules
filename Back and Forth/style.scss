@@ -1,0 +1,23 @@
+.back-and-forth {
+	overflow: hidden;
+
+	.row {
+		margin-top: 3em;
+	}
+}
+
+@media (min-width: 50em){
+	.back-and-forth {
+		.back {
+			margin-right: 3em;
+		}
+		.row {
+			&:nth-of-type(even) {
+				.back {
+					margin: 0 0 0 3em;
+					order: 2;
+				}
+			}
+		}
+	}
+}

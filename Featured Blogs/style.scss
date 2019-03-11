@@ -1,0 +1,26 @@
+.featured-blogs {
+	h3, p {
+		color: $color-primary;
+	}
+
+	h3 {
+		transition: color .2s linear;
+	}
+
+	.moving-caret {
+		color: $color-highlight;
+		float: right;
+	}
+
+	li + li {
+		border-top: 1px dashed $color-highlight;
+		padding-top: 1.5em;
+	}
+}
+
+.featured-blog:hover,
+.featured-blog:focus {
+	h3 {
+		color: $color-highlight;
+	}
+}

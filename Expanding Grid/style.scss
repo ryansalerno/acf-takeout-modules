@@ -1,0 +1,166 @@
+.expanding-grid {
+	input:checked {
+		~ label.toggler {
+			color: $color-primary;
+		}
+	}
+
+	label.toggler {
+		display: block;
+		margin-top: 1.5rem;
+	}
+
+	.one-color.icon {
+		svg,
+		path,
+		polygon,
+		rect,
+		circle {
+			fill: $color-primary;
+		}
+	}
+
+	span.subtitle {
+		display: block;
+		margin: 0;
+	}
+
+	.toggle-target {
+		position: relative;
+		padding: 1.5em;
+		border: 1px solid $color-secondary;
+		border-left: 0;
+		border-right: 0;
+
+		&:before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -.75em);
+			content: "";
+			width: 0;
+			height: 0;
+			border-left: .75em solid transparent;
+			border-right: .75em solid transparent;
+			border-bottom: .75em solid $color-secondary;
+		}
+	}
+
+	// Edge haaaaaaates the columns in the flex-item with the weird margins
+	// like, really super hates it
+	// this abomination of a rule lets us target IE/Edge and turn the columns off
+	_:-ms-lang(x), .column-wrap.x2 {
+		// holy shit, right?
+		columns: auto auto;
+	}
+}
+
+@media (min-width: 50em){
+	.expanding-grid {
+		.toggle-target {
+			padding: 1.5em 3em;
+			min-height: 15em;
+		}
+
+		.x3 {
+			/*
+
+			You buckled in?
+
+			.x3 is 30% flex-basis, so 30% width
+			which means we need the margin to be 70%
+			in order to compensate and add up to the full 100%
+			70 / 30 = 2.3333 = 233.33%
+
+			but there's also 2rem of padding, so
+			2rem * 2.33 = 4.66rem
+
+			this could maybe be a really complicated mixin,
+			buuuuut the selectors and edge cases are hard, so....
+
+			*/
+			li:nth-of-type(3n+1) .toggle-target {
+				margin-right: calc(-233.33% - 4.66rem);
+
+				&:before {
+					// again, the width is 30% including 2rem of padding
+					// so halfway is.... 15% - 1rem
+					// BUT our 100% is 2rem short, so...
+					left: calc(15% - .7rem);
+				}
+			}
+			li:nth-of-type(3n+2) .toggle-target {
+				margin-left: calc(-116.667% - 2.33rem);
+				margin-right: calc(-116.667% - 2.33rem);
+				// half is still half here
+			}
+			li:nth-of-type(3n) .toggle-target {
+				margin-left: calc(-233.33% - 4.66rem);
+
+				&:before {
+					left: calc(85% + .7rem);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 50em) and (max-width: 71.25em){
+	.expanding-grid {
+		.x4 {
+			// (100 - 45) / 45 = 1.2222
+			li:nth-of-type(2n+1) .toggle-target {
+				margin-right: calc(-122.22% - 2.44rem);
+
+				&:before {
+					left: calc(22.5% - .55rem);
+				}
+			}
+			li:nth-of-type(2n+2) .toggle-target {
+				margin-left: calc(-122.22% - 2.44rem);
+
+				&:before {
+					left: calc(77.5% + .55rem);
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 71.25em){
+	.expanding-grid {
+		.x4 {
+			// (100 - 22.5) / 22.5 = 3.4444
+			li:nth-of-type(4n+1) .toggle-target {
+				margin-right: calc(-344.44% - 6.8888rem);
+
+				&:before {
+					left: calc(11.25% - .775rem);
+				}
+			}
+			li:nth-of-type(4n+2) .toggle-target {
+				margin-left: calc(-114.8% - 2.296rem);
+				margin-right: calc(-229.64% - 4.592rem);
+
+				&:before {
+					left: calc(37.08% - .3875rem);
+				}
+			}
+			li:nth-of-type(4n+3) .toggle-target {
+				margin-left: calc(-229.64% - 4.592rem);
+				margin-right: calc(-114.8% - 2.296rem);
+
+				&:before {
+					left: calc(62.92% + .3875rem);
+				}
+			}
+			li:nth-of-type(4n) .toggle-target {
+				margin-left: calc(-344.44% - 6.8888rem);
+
+				&:before {
+					left: calc(88.75% + .775rem);
+				}
+			}
+		}
+	}
+}

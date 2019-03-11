@@ -1,0 +1,18 @@
+.cta-bar {
+	// we need to recreate .section looking padding with margins below because we don't know if the button will sit next to or below the text based on the length of the text
+	padding-top: 3em;
+	margin-top: 0;
+
+	.horiz {
+		align-items: center;
+	}
+
+	h2 {
+		margin-bottom: 3rem;
+	}
+
+	p {
+		margin: 0 3em 3em;
+		flex-shrink: 0;
+	}
+}
